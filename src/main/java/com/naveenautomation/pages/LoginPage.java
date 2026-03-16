@@ -49,4 +49,6 @@ public class LoginPage extends TestBase {
 		return alertMsg.getText();
 	}
 
+	
+
 }
