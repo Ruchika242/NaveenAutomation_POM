@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extentreports>
+
+    <!-- Theme of the report: STANDARD or DARK -->
+    <configuration>
+        <theme>light</theme>
+
+        <!-- Encoding -->
+        <encoding>UTF-8</encoding>
+
+        <!-- Protocol -->
+        <protocol>https</protocol>
+
+        <!-- Title of the document -->
+        <documentTitle>Extent</documentTitle>
+
+        <!-- Report Name -->
+        <reportName>Automation Report</reportName>
+
+        <!-- Charts Location: TOP or BOTTOM -->
+        <testViewChartLocation>bottom</testViewChartLocation>
+
+        
+
+        <!-- Custom JavaScript -->
+       <scripts>
+            <![CDATA[
+                $(document).ready(function() {
+                    
+                });
+            ]]>
+        </scripts>
+
+        <!-- Custom styles -->
+        <styles>
+            <![CDATA[
+                
+            ]]>
+        </styles>
+
+    </configuration>
+
+</extentreports>

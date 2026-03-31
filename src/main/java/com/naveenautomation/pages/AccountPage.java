@@ -33,6 +33,15 @@ public class AccountPage extends TestBase {
 	
 	@FindBy(xpath ="//div[text()=' Success: Your password has been successfully updated.']")
 	WebElement sucessMsgOnChangingPassword;
+	
+	@FindBy(xpath = "(//a[text()='Returns'])[1]")
+	WebElement returns;
+	
+	@FindBy(xpath = "(//a[text()='Newsletter'])[1]")
+	WebElement newsLetter;
+	
+	@FindBy(xpath=" //div[text()=' Success: Your newsletter subscription has been successfully updated!']")
+	WebElement successMsgOnUpdatingSubscription;
 
 	public String getTextOfMyAccountPage() {
 		return myAccText.getText();
@@ -60,6 +69,22 @@ public class AccountPage extends TestBase {
 	
 	public String getTextOfSuccessMsgOnChangingThePwd() {
 		return sucessMsgOnChangingPassword.getText();
+	}
+	
+	public ReturnPage clickOnReturns() {
+		returns.click();
+		return new ReturnPage();
+	}
+	
+	public NewsLetterPage clickOnNewsLetter() {
+		newsLetter.click();
+		return new NewsLetterPage();
+		
+	}
+	
+	public String getTextOfSuccessMsgOnUpdatingTheSubscription() {
+		return successMsgOnUpdatingSubscription.getText();
+		
 	}
 
 }

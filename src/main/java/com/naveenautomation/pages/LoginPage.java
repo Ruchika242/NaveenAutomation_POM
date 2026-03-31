@@ -7,12 +7,11 @@ import org.openqa.selenium.support.PageFactory;
 import com.naveenautomation.testbase.TestBase;
 
 public class LoginPage extends TestBase {
-	 
-	public LoginPage() {
-		PageFactory.initElements(wd, this); // It helps in initialize all the elements with the webdriver of this LoginPage Class
-	}
-	
 
+	public LoginPage() {
+		PageFactory.initElements(wd, this); // It helps in initialize all the elements with the webdriver of this
+											// LoginPage Class
+	}
 
 	@FindBy(id = "input-email")
 	WebElement emailInput;
@@ -22,11 +21,11 @@ public class LoginPage extends TestBase {
 
 	@FindBy(xpath = "//input[@type='submit']")
 	WebElement loginBtn;
-	
-	@FindBy(css  = "div.alert")
+
+	@FindBy(css = "div.alert")
 	WebElement alertMsg;
-    
-	//This pvt method is not visible in LoginPageTest class of separate package
+
+	// This pvt method is not visible in LoginPageTest class of separate package
 	private void enterEmail(String emailID) {
 		emailInput.sendKeys(emailID);
 
@@ -36,19 +35,17 @@ public class LoginPage extends TestBase {
 
 		pwdInput.sendKeys(password);
 	}
-	
+
 	public AccountPage clickOnlogin(String email, String pwd) {
 		enterEmail(email);
 		enterPassword(pwd);
 		loginBtn.click();
 		return new AccountPage();
-		
+
 	}
-	
+
 	public String getAlertMsgText() {
 		return alertMsg.getText();
 	}
-
-	
 
 }

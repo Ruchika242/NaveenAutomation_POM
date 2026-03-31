@@ -5,8 +5,9 @@
   <meta charset='utf-8'>
   <title>TestNG reports</title>
 
-    <link type="text/css" href="testng-reports.css" rel="stylesheet" />
-    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="testng-reports.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type='text/javascript'>
@@ -20,9 +21,9 @@
      -->
   </head>
 
-  <body>
-    <div class="top-banner-root">
+  <body>    <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
       <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
@@ -49,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Deepak\AppData\Local\Temp\testng-eclipse-791464990\testng-customsuite.xml</span>
+                    <span>C:\Users\Deepak\AppData\Local\Temp\testng-eclipse--1061153414\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,7 +103,12 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.naveenautomation.PageTests.AccountPageTest" class="method navigator-link" hash-for-method="validateUserIsAbleToChangePassword">validateUserIsAbleToChangePassword</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.naveenautomation.PageTests.LoginPageTest" class="method navigator-link" hash-for-method="validateLoginWithMultipleCredentials(deepak.deepak802@gmail.com, Deep@91)">validateLoginWithMultipleCredentials(deepak.deepak802@gmail.com, Deep@91)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.naveenautomation.PageTests.LoginPageTest" class="method navigator-link" hash-for-method="validateLoginWithMultipleCredentials(chaudharyruchika3@gmail.com, Sam@ira24)">validateLoginWithMultipleCredentials(chaudharyruchika3@gmail.com, Sam@ira24)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -120,14 +126,23 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.naveenautomation.PageTests.AccountPageTest</span>
+              <span class="class-name">com.naveenautomation.PageTests.LoginPageTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="validateUserIsAbleToChangePassword">
-                  </a> <!-- validateUserIsAbleToChangePassword -->
-                  <span class="method-name">validateUserIsAbleToChangePassword</span>
+                  <a name="validateLoginWithMultipleCredentials(deepak.deepak802@gmail.com, Deep@91)">
+                  </a> <!-- validateLoginWithMultipleCredentials(deepak.deepak802@gmail.com, Deep@91) -->
+                  <span class="method-name">validateLoginWithMultipleCredentials</span>
+                  <span class="parameters">(deepak.deepak802@gmail.com,Deep@91)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateLoginWithMultipleCredentials(chaudharyruchika3@gmail.com, Sam@ira24)">
+                  </a> <!-- validateLoginWithMultipleCredentials(chaudharyruchika3@gmail.com, Sam@ira24) -->
+                  <span class="method-name">validateLoginWithMultipleCredentials</span>
+                  <span class="parameters">(chaudharyruchika3@gmail.com,Sam@ira24)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -135,20 +150,20 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Deepak\AppData\Local\Temp\testng-eclipse-791464990\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Deepak\AppData\Local\Temp\testng-eclipse--1061153414\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.naveenautomation.PageTests.AccountPageTest&quot;&gt;
+      &lt;class name=&quot;com.naveenautomation.PageTests.LoginPageTest&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;validateUserIsAbleToChangePassword&quot;/&gt;
+          &lt;include name=&quot;validateLoginWithMultipleCredentials&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.naveenautomation.PageTests.AccountPageTest --&gt;
+      &lt;/class&gt; &lt;!-- com.naveenautomation.PageTests.LoginPageTest --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -188,11 +203,15 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'validateUserIsAbleToChangePassword')
-data.setCell(0, 2, 'com.naveenautomation.PageTests.AccountPageTest')
-data.setCell(0, 3, 2894);
+data.setCell(0, 1, 'validateLoginWithMultipleCredentials')
+data.setCell(0, 2, 'com.naveenautomation.PageTests.LoginPageTest')
+data.setCell(0, 3, 1368);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'validateLoginWithMultipleCredentials')
+data.setCell(1, 2, 'com.naveenautomation.PageTests.LoginPageTest')
+data.setCell(1, 3, 1117);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
@@ -212,13 +231,15 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">1 ignored method</span>
+            <span class="header-content">2 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">com.naveenautomation.PageTests.AccountPageTest</span>
+              <span class="ignored-class-name">com.naveenautomation.PageTests.LoginPageTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">validateUserIsAbleToUpdatePersonalInfo</span>
+                <span class="ignored-method-name">validateUserIsAbleToLoginWithInValidCred</span>
+                <br/>
+                <span class="ignored-method-name">validateUserIsAbleToLoginWithValidCred</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -230,22 +251,39 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.naveenautomation.PageTests.AccountPageTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.naveenautomation.PageTests.LoginPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">loggerSetup</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">launch</span>
-                <span class="method-start">0 ms</span>
+                <span class="method-start">572 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">validateUserIsAbleToChangePassword</span>
-                <span class="method-start">3630 ms</span>
+                <span class="method-name">validateLoginWithMultipleCredentials(chaudharyruchika3@gmail.com, Sam@ira24)</span>
+                <span class="method-start">6514 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">6524 ms</span>
+                <span class="method-start">7891 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">launch</span>
+                <span class="method-start">8140 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validateLoginWithMultipleCredentials(deepak.deepak802@gmail.com, Deep@91)</span>
+                <span class="method-start">11879 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">12998 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
     </div> <!-- wrapper -->
   </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
 </html>
