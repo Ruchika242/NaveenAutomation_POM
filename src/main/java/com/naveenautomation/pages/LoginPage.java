@@ -1,5 +1,6 @@
 package com.naveenautomation.pages;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -12,6 +13,8 @@ public class LoginPage extends TestBase {
 		PageFactory.initElements(wd, this); // It helps in initialize all the elements with the webdriver of this
 											// LoginPage Class
 	}
+
+	
 
 	@FindBy(id = "input-email")
 	WebElement emailInput;
@@ -43,9 +46,15 @@ public class LoginPage extends TestBase {
 		return new AccountPage();
 
 	}
+	
+	
 
 	public String getAlertMsgText() {
 		return alertMsg.getText();
 	}
+
+	
+	
+	
 
 }

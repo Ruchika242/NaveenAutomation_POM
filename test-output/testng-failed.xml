@@ -3,14 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.naveenautomation.PageTests.LoginPageTest">
+      <class name="com.naveenautomation.PageTests.HomePageTest">
         <methods>
-          <include name="closeBrowser"/>
           <include name="loggerSetup"/>
-          <include name="validateLoginWithMultipleCredentials" invocation-numbers="1 2 3 4"/>
+          <include name="userIsAbleToPlaceOrder"/>
           <include name="launch"/>
         </methods>
-      </class> <!-- com.naveenautomation.PageTests.LoginPageTest -->
+      </class> <!-- com.naveenautomation.PageTests.HomePageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

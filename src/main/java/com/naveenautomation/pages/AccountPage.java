@@ -42,6 +42,12 @@ public class AccountPage extends TestBase {
 	
 	@FindBy(xpath=" //div[text()=' Success: Your newsletter subscription has been successfully updated!']")
 	WebElement successMsgOnUpdatingSubscription;
+	
+	@FindBy(xpath="//span[text()='My Account']")
+	WebElement myAccount;
+	
+	@FindBy(xpath="(//a[text()='Order History'])[1]")
+	WebElement orderHistoryText;
 
 	public String getTextOfMyAccountPage() {
 		return myAccText.getText();
@@ -86,5 +92,12 @@ public class AccountPage extends TestBase {
 		return successMsgOnUpdatingSubscription.getText();
 		
 	}
+	
+	public OrderPage getOrderHistory() {
+		myAccount.click();
+		orderHistoryText.click();
+		return new OrderPage();
+		
+		}
 
 }

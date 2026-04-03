@@ -72,11 +72,18 @@ public class AccountPageTest extends TestBase {
 		accountPage = login.clickOnlogin("chaudharyruchika3@gmail.com", "Sam@ira24");
 		newsLetterPage = accountPage.clickOnNewsLetter();
 		accountPage = newsLetterPage.clickOnYesRadioButton();
-		String expectedMsgOnUpdatingSubscription = "Success: your newsletter subscription has been successfully updated!";
+		String expectedMsgOnUpdatingSubscription = "Success: Your newsletter subscription has been successfully updated!";
 		Assert.assertEquals(accountPage.getTextOfSuccessMsgOnUpdatingTheSubscription(),
 				expectedMsgOnUpdatingSubscription, "Not able to update the subscription");
 		System.out.println("This line will not be executed");
 
+	}
+	
+	
+	public void userIsAbleToCheckOrderHistory() {
+		accountPage = login.clickOnlogin("chaudharyruchika3@gmail.com", "Sam@ira24");
+		accountPage.getOrderHistory();
+		
 	}
 
 	@AfterMethod

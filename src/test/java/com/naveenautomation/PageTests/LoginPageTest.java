@@ -6,10 +6,15 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import com.naveenautomation.Utils.ExcelUtils;
 import com.naveenautomation.pages.AccountPage;
+import com.naveenautomation.pages.CheckOutPage;
+import com.naveenautomation.pages.HomePage;
 import com.naveenautomation.pages.LoginPage;
+import com.naveenautomation.pages.ProductDetailsPage;
+import com.naveenautomation.pages.ProductSearchPage;
 import com.naveenautomation.testbase.TestBase;
 
 public class LoginPageTest extends TestBase {
@@ -22,6 +27,11 @@ public class LoginPageTest extends TestBase {
 
 	private LoginPage login;
 	private AccountPage accountPage;
+	private ProductSearchPage productSearchPage;
+	private ProductDetailsPage productDetailsPage;
+	private CheckOutPage checkOutPage;
+	private HomePage homePage;
+	SoftAssert softassert = new SoftAssert();
 
 	@BeforeMethod
 	public void launch() {
@@ -39,45 +49,43 @@ public class LoginPageTest extends TestBase {
 
 	@Test
 	public void validateUserIsAbleToLoginWithInValidCred() {
-		accountPage=login.clickOnlogin("chaudharyruchika3@gmail.com", "Ravish@941");
+		accountPage = login.clickOnlogin("chaudharyruchika3@gmail.com", "Ravish@941");
 		Assert.assertEquals(login.getAlertMsgText(), "Warning: No match for E-Mail Address and/or Password.",
 				"User is not able to logged in");
-		
-		
 
 	}
-	
+
 	@Test(dataProvider = "UserCredentials")
 	public void validateLoginWithMultipleCredentials(String userName, String password) {
-		accountPage=login.clickOnlogin(userName, password);
+		accountPage = login.clickOnlogin(userName, password);
 		Assert.assertEquals(wd.getTitle(), "My Account", "User not loggedIn");
-		
+
 	}
-	
-	
-	@DataProvider(name="UserCredentials")
+
+	@DataProvider(name = "UserCredentials")
 	public String[][] getDataFromExcelSheet() throws Exception {
 		logger.info("Reading from DataProvider");
-		String fileName ="C:\\Users\\Deepak\\Desktop\\LoginCredentials.xlsx";
-		String sheetName ="Sheet1";
+		String fileName = "C:\\Users\\Deepak\\Desktop\\LoginCredentials.xlsx";
+		String sheetName = "Sheet1";
 		int rowCount = ExcelUtils.getRowCount(fileName, sheetName);
-		//System.out.println("Row Count :" + rowCount);
-		
+		// System.out.println("Row Count :" + rowCount);
+
 		int cellCount = ExcelUtils.getCellCount(fileName, sheetName, rowCount);
-		//System.out.println("Cell Count: " +cellCount);
-		
+		// System.out.println("Cell Count: " +cellCount);
+
 		String cellValue = ExcelUtils.getCellData(fileName, sheetName, rowCount, cellCount);
-		
-		//System.out.println(cellValue);
-		
-		String[] [] virtualSheet = new String[rowCount][cellCount];
-		for(int i=1; i <= rowCount; i++) {
-			for(int j=0; j< cellCount;j++) {
-				virtualSheet[i-1][j] = ExcelUtils.getCellData(fileName, sheetName, i, j);//Populating the array into virtualsheet....	
+
+		// System.out.println(cellValue);
+
+		String[][] virtualSheet = new String[rowCount][cellCount];
+		for (int i = 1; i <= rowCount; i++) {
+			for (int j = 0; j < cellCount; j++) {
+				virtualSheet[i - 1][j] = ExcelUtils.getCellData(fileName, sheetName, i, j);// Populating the array into
+																							// virtualsheet....
 			}
-			
+
 		}
-		
+
 		return virtualSheet;
 	}
 
@@ -86,4 +94,12 @@ public class LoginPageTest extends TestBase {
 		teardown();
 	}
 
+	
+	
+	
+	
+	
+
 }
+
+//HP LP3065
