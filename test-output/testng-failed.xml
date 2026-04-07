@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.naveenautomation.PageTests.HomePageTest">
+      <class name="com.naveenautomation.PageTests.AccountPageTest">
         <methods>
-          <include name="loggerSetup"/>
-          <include name="userIsAbleToPlaceOrder"/>
           <include name="launch"/>
+          <include name="loggerSetup"/>
+          <include name="closeBrowser"/>
+          <include name="validateUserIsAbleToRemoveProductInWishList"/>
         </methods>
-      </class> <!-- com.naveenautomation.PageTests.HomePageTest -->
+      </class> <!-- com.naveenautomation.PageTests.AccountPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -24,6 +24,9 @@ public class HomePage extends TestBase {
 	
 	@FindBy(css="#search>span.input-group-btn>button")
 	WebElement searchBtn;
+	
+	@FindBy(xpath="//li//a[text()='Cameras']")
+	WebElement camerasCategory;
 
 	public String getHomePageText() {
 		return homePageText.getText();
@@ -35,6 +38,11 @@ public class HomePage extends TestBase {
 		return new ProductSearchPage();
 		
 
+	}
+	
+	public CategoryPage clickOnCamerasCategory() {
+		camerasCategory.click();
+		return new CategoryPage();
 	}
 
 }

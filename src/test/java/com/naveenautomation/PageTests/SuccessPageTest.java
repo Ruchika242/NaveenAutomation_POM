@@ -24,7 +24,7 @@ public class SuccessPageTest extends TestBase  {
 	private CheckOutPage checkOutPage;
 	private HomePage homePage;
 	private SuccessPage successPage;
-	SoftAssert softassert = new SoftAssert();
+	
 	
 	@BeforeMethod
 	public void launch() {

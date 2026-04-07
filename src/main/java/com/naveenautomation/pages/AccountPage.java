@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+
 import com.naveenautomation.testbase.TestBase;
 
 public class AccountPage extends TestBase {
@@ -48,6 +49,75 @@ public class AccountPage extends TestBase {
 	
 	@FindBy(xpath="(//a[text()='Order History'])[1]")
 	WebElement orderHistoryText;
+	
+	
+	@FindBy(xpath="//a[text()='Desktops']")
+	WebElement desktopElement;
+	
+	@FindBy(xpath="//a[text()='Show All Desktops']")
+	WebElement showAllDesktopsElement;
+	
+	@FindBy(xpath="//div[@class='list-group']//a[text()='Address Book']")
+	WebElement addressBook;
+
+	@FindBy(xpath = "//div[@class='list-group']")
+	List<WebElement> allMenuOptions;
+	
+	public Object  selectOptionFromMenu(RightMenu menu) {
+		for (WebElement opt : allMenuOptions) {
+			if (opt.getText().trim().equalsIgnoreCase(menu.getValue())) {
+				opt.click();
+				
+				switch (menu) {
+				  case MYACC:
+					return new  AccountPage() ;
+					
+				  case EDIT:
+					  return new EditPage();
+					  
+				  case PWD:
+					  return new PasswordPage();
+				
+				 
+				  case ADDBOOK:
+					  return new AddressPage();
+					  
+					  
+				  case WISHLIST:
+					  return new WishListPage();
+					  
+				  case ORDERHISTORY:
+					  return new OrderPage();
+					    
+				  case DOWNLOAD:
+					  return new DownloadPage();
+					  
+					  
+				  case RECURRINGPAYMENT:
+					  return new RecurringPage();
+					  
+					  
+				  case REWARDS:
+					  return new RewardsPage();
+					  
+				  case RETURN:
+					  return new ReturnPage();
+					  
+				  case TRANSACTION:
+					  return new TransactionPage();
+					  
+				  case NEWSLETTER:
+					  return new NewsLetterPage();
+					  
+				  default:
+	                    throw new IllegalArgumentException("Invalid menu option");
+				  
+					
+				}
+			}
+		}
+		throw new RuntimeException("Menu option not found: " + menu);
+	}
 
 	public String getTextOfMyAccountPage() {
 		return myAccText.getText();
@@ -99,5 +169,22 @@ public class AccountPage extends TestBase {
 		return new OrderPage();
 		
 		}
+	
+	public void clickOnDesktopElement() {
+		desktopElement.click();
+		
+		
+		
+	}
+	
+	public CategoryPage clickOnShowAllItems() {
+		showAllDesktopsElement.click();
+		return new CategoryPage();
+	}
+	
+	public AddressPage clickOnAddressBook() {
+		addressBook.click();
+		return new AddressPage();
+	}
 
 }

@@ -22,7 +22,7 @@ public class HomePageTest extends TestBase {
 	private CheckOutPage checkOutPage;
 	private HomePage homePage;
 	private SuccessPage successPage;
-	SoftAssert softassert = new SoftAssert();
+	
 
 	@BeforeMethod
 	public void launch() {
@@ -31,7 +31,7 @@ public class HomePageTest extends TestBase {
 	}
 
 	@Test
-	public void userIsAbleToSearchforSpecificProduct() {
+	public void validateUserIsAbleToSearchforSpecificProduct() {
 		productSearchPage = homePage.enterProductNameInSearchBar("HP");
 		String expectedProductText = "HP LP3065";
 		softassert.assertEquals(productSearchPage.getTextHPLaptop(), expectedProductText,
@@ -42,29 +42,27 @@ public class HomePageTest extends TestBase {
 	}
 
 	@Test
-	public void userIsAbleToPlaceOrder() {
+	public void validateUserIsAbleToPlaceOrder() {
 		productSearchPage = homePage.enterProductNameInSearchBar("HP");
 		productDetailsPage = productSearchPage.clickOnProduct();
 		productDetailsPage.enterDeliveryDate("2026-04-04");
 		productDetailsPage.clickOnAddtoCart();
 		productDetailsPage.clickOnCartBtn();
-		checkOutPage=productDetailsPage.clickOnCheckoutBtn();
+		checkOutPage = productDetailsPage.clickOnCheckoutBtn();
 		checkOutPage.clickOnLoginForCheckOut("chaudharyruchika3@gmail.com", "Sam@ira24");
 		checkOutPage.clickOnNewAddressRadioBtn();
-		checkOutPage.fillAndSubmitBillingDetails("Ruchi", "Ravish","LagerFeld Dr", "Brampton", "L7A 5L1", "Canada", "Ontario");
+		checkOutPage.fillAndSubmitBillingDetails("Ruchi", "Ravish", "LagerFeld Dr", "Brampton", "L7A 5L1", "Canada",
+				"Ontario");
 		checkOutPage.addDeliveryDetails();
 		checkOutPage.selectDeliveryMethod();
 		checkOutPage.selectCheckBoxForPaymentMethod();
 		checkOutPage.clickOnContinueBtnForPaymentMethod();
-		successPage= checkOutPage.clickOnConfirmButton();
-		
+		successPage = checkOutPage.clickOnConfirmButton();
+
 		String expectedTextOnOrderPlaced = "Your order has been placed!";
 		softassert.assertEquals(successPage.textOnOrderPlaced(), expectedTextOnOrderPlaced, "Order Not Placed");
 		softassert.assertAll();
-		
 
 	}
-	
-	
 
 }

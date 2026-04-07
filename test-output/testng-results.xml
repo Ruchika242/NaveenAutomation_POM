@@ -1,75 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results retried="1" ignored="1" total="13" passed="11" failed="0" skipped="0">
+<testng-results ignored="6" total="7" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-04-03T19:09:51 GMT-04:00" name="Suite" finished-at="2026-04-03T19:11:05 GMT-04:00" duration-ms="74403">
+  <suite started-at="2026-04-07T02:28:09 GMT-04:00" name="Default suite" finished-at="2026-04-07T02:28:44 GMT-04:00" duration-ms="34839">
     <groups>
     </groups>
-    <test started-at="2026-04-03T19:09:51 GMT-04:00" name="Test" finished-at="2026-04-03T19:11:05 GMT-04:00" duration-ms="74403">
-      <class name="com.naveenautomation.PageTests.AccountLogOutPageTest">
-        <test-method is-config="true" signature="loggerSetup()[pri:0, instance:com.naveenautomation.PageTests.AccountLogOutPageTest@279fedbd]" started-at="2026-04-03T19:10:10 GMT-04:00" name="loggerSetup" finished-at="2026-04-03T19:10:10 GMT-04:00" duration-ms="2" status="PASS">
+    <test started-at="2026-04-07T02:28:09 GMT-04:00" name="Default test" finished-at="2026-04-07T02:28:44 GMT-04:00" duration-ms="34839">
+      <class name="com.naveenautomation.PageTests.AccountPageTest">
+        <test-method is-config="true" signature="loggerSetup()[pri:0, instance:com.naveenautomation.PageTests.AccountPageTest@1ce24091]" started-at="2026-04-07T02:28:09 GMT-04:00" name="loggerSetup" finished-at="2026-04-07T02:28:09 GMT-04:00" duration-ms="80" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loggerSetup -->
-        <test-method is-config="true" signature="launch()[pri:0, instance:com.naveenautomation.PageTests.AccountLogOutPageTest@279fedbd]" started-at="2026-04-03T19:10:10 GMT-04:00" name="launch" finished-at="2026-04-03T19:10:13 GMT-04:00" duration-ms="3171" status="PASS">
+        <test-method is-config="true" signature="launch()[pri:0, instance:com.naveenautomation.PageTests.AccountPageTest@1ce24091]" started-at="2026-04-07T02:28:09 GMT-04:00" name="launch" finished-at="2026-04-07T02:28:13 GMT-04:00" duration-ms="4075" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launch -->
-        <test-method signature="userIsAbleToLandOnHomePage()[pri:0, instance:com.naveenautomation.PageTests.AccountLogOutPageTest@279fedbd]" started-at="2026-04-03T19:10:13 GMT-04:00" name="userIsAbleToLandOnHomePage" finished-at="2026-04-03T19:10:17 GMT-04:00" duration-ms="3811" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- userIsAbleToLandOnHomePage -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.naveenautomation.PageTests.AccountLogOutPageTest@279fedbd]" started-at="2026-04-03T19:10:17 GMT-04:00" name="closeBrowser" finished-at="2026-04-03T19:10:17 GMT-04:00" duration-ms="187" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="launch()[pri:0, instance:com.naveenautomation.PageTests.AccountLogOutPageTest@279fedbd]" started-at="2026-04-03T19:10:17 GMT-04:00" name="launch" finished-at="2026-04-03T19:10:20 GMT-04:00" duration-ms="3038" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launch -->
-        <test-method signature="userIsAbleToLogout()[pri:0, instance:com.naveenautomation.PageTests.AccountLogOutPageTest@279fedbd]" started-at="2026-04-03T19:10:20 GMT-04:00" name="userIsAbleToLogout" finished-at="2026-04-03T19:10:22 GMT-04:00" duration-ms="1955" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- userIsAbleToLogout -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.naveenautomation.PageTests.AccountLogOutPageTest@279fedbd]" started-at="2026-04-03T19:10:22 GMT-04:00" name="closeBrowser" finished-at="2026-04-03T19:10:22 GMT-04:00" duration-ms="215" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-      </class> <!-- com.naveenautomation.PageTests.AccountLogOutPageTest -->
-      <class name="com.naveenautomation.PageTests.LoginPageTest">
-        <test-method is-config="true" signature="loggerSetup()[pri:0, instance:com.naveenautomation.PageTests.LoginPageTest@2362f559]" started-at="2026-04-03T19:10:22 GMT-04:00" name="loggerSetup" finished-at="2026-04-03T19:10:22 GMT-04:00" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loggerSetup -->
-        <test-method is-config="true" signature="launch()[pri:0, instance:com.naveenautomation.PageTests.LoginPageTest@2362f559]" started-at="2026-04-03T19:10:23 GMT-04:00" name="launch" finished-at="2026-04-03T19:10:26 GMT-04:00" duration-ms="3295" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launch -->
-        <test-method retried="true" signature="validateLoginWithMultipleCredentials(java.lang.String,java.lang.String)[pri:0, instance:com.naveenautomation.PageTests.LoginPageTest@2362f559]" started-at="2026-04-03T19:10:26 GMT-04:00" name="validateLoginWithMultipleCredentials" data-provider="UserCredentials" finished-at="2026-04-03T19:10:27 GMT-04:00" duration-ms="411" status="SKIP">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chaudharyruchika3@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Sam@ira24]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
+        <test-method signature="validateUserIsAbleToRemoveProductInWishList()[pri:0, instance:com.naveenautomation.PageTests.AccountPageTest@1ce24091]" started-at="2026-04-07T02:28:13 GMT-04:00" name="validateUserIsAbleToRemoveProductInWishList" finished-at="2026-04-07T02:28:44 GMT-04:00" duration-ms="30505" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchSessionException">
             <message>
-              <![CDATA[User not loggedIn expected [My Account] but found [Account Login]]]>
+              <![CDATA[invalid session id: session deleted as the browser has closed the connection
+from disconnected: unable to send message to renderer
+  (Session info: chrome=146.0.7680.178)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-J14VFOC7', ip: '10.0.0.153', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\Deepak\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64889}, goog:processID: 39892, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f5b1ffb8a5d0a0c4c5aa0c42b0ca2921
+*** Element info: {Using=xpath, value=//span[text()='Wish List (1)']}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: User not loggedIn expected [My Account] but found [Account Login]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1590)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:656)
-at com.naveenautomation.PageTests.LoginPageTest.validateLoginWithMultipleCredentials(LoginPageTest.java:61)
+              <![CDATA[org.openqa.selenium.NoSuchSessionException: invalid session id: session deleted as the browser has closed the connection
+from disconnected: unable to send message to renderer
+  (Session info: chrome=146.0.7680.178)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-J14VFOC7', ip: '10.0.0.153', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\Deepak\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64889}, goog:processID: 39892, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f5b1ffb8a5d0a0c4c5aa0c42b0ca2921
+*** Element info: {Using=xpath, value=//span[text()='Wish List (1)']}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:105)
+at jdk.proxy2/jdk.proxy2.$Proxy11.findElement(Unknown Source)
+at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:194)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
+at com.naveenautomation.pages.CategoryPage.clickOnWishListButton(CategoryPage.java:41)
+at com.naveenautomation.PageTests.AccountPageTest.validateUserIsAbleToRemoveProductInWishList(AccountPageTest.java:118)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -100,151 +95,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateLoginWithMultipleCredentials -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.naveenautomation.PageTests.LoginPageTest@2362f559]" started-at="2026-04-03T19:10:27 GMT-04:00" name="closeBrowser" finished-at="2026-04-03T19:10:27 GMT-04:00" duration-ms="221" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="launch()[pri:0, instance:com.naveenautomation.PageTests.LoginPageTest@2362f559]" started-at="2026-04-03T19:10:27 GMT-04:00" name="launch" finished-at="2026-04-03T19:10:30 GMT-04:00" duration-ms="3260" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launch -->
-        <test-method signature="validateLoginWithMultipleCredentials(java.lang.String,java.lang.String)[pri:0, instance:com.naveenautomation.PageTests.LoginPageTest@2362f559]" started-at="2026-04-03T19:10:30 GMT-04:00" name="validateLoginWithMultipleCredentials" data-provider="UserCredentials" finished-at="2026-04-03T19:10:31 GMT-04:00" duration-ms="1258" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chaudharyruchika3@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Sam@ira24]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateLoginWithMultipleCredentials -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.naveenautomation.PageTests.LoginPageTest@2362f559]" started-at="2026-04-03T19:10:31 GMT-04:00" name="closeBrowser" finished-at="2026-04-03T19:10:31 GMT-04:00" duration-ms="211" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="launch()[pri:0, instance:com.naveenautomation.PageTests.LoginPageTest@2362f559]" started-at="2026-04-03T19:10:31 GMT-04:00" name="launch" finished-at="2026-04-03T19:10:35 GMT-04:00" duration-ms="3417" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launch -->
-        <test-method signature="validateLoginWithMultipleCredentials(java.lang.String,java.lang.String)[pri:0, instance:com.naveenautomation.PageTests.LoginPageTest@2362f559]" started-at="2026-04-03T19:10:35 GMT-04:00" name="validateLoginWithMultipleCredentials" data-provider="UserCredentials" finished-at="2026-04-03T19:10:36 GMT-04:00" duration-ms="1495" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[deepak.deepak802@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Deep@91]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateLoginWithMultipleCredentials -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.naveenautomation.PageTests.LoginPageTest@2362f559]" started-at="2026-04-03T19:10:36 GMT-04:00" name="closeBrowser" finished-at="2026-04-03T19:10:37 GMT-04:00" duration-ms="198" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="launch()[pri:0, instance:com.naveenautomation.PageTests.LoginPageTest@2362f559]" started-at="2026-04-03T19:10:37 GMT-04:00" name="launch" finished-at="2026-04-03T19:10:40 GMT-04:00" duration-ms="3582" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launch -->
-        <test-method signature="validateUserIsAbleToLoginWithInValidCred()[pri:0, instance:com.naveenautomation.PageTests.LoginPageTest@2362f559]" started-at="2026-04-03T19:10:40 GMT-04:00" name="validateUserIsAbleToLoginWithInValidCred" finished-at="2026-04-03T19:10:41 GMT-04:00" duration-ms="804" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateUserIsAbleToLoginWithInValidCred -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.naveenautomation.PageTests.LoginPageTest@2362f559]" started-at="2026-04-03T19:10:41 GMT-04:00" name="closeBrowser" finished-at="2026-04-03T19:10:41 GMT-04:00" duration-ms="207" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="launch()[pri:0, instance:com.naveenautomation.PageTests.LoginPageTest@2362f559]" started-at="2026-04-03T19:10:41 GMT-04:00" name="launch" finished-at="2026-04-03T19:10:45 GMT-04:00" duration-ms="3463" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launch -->
-        <test-method signature="validateUserIsAbleToLoginWithValidCred()[pri:0, instance:com.naveenautomation.PageTests.LoginPageTest@2362f559]" started-at="2026-04-03T19:10:45 GMT-04:00" name="validateUserIsAbleToLoginWithValidCred" finished-at="2026-04-03T19:10:46 GMT-04:00" duration-ms="1161" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateUserIsAbleToLoginWithValidCred -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.naveenautomation.PageTests.LoginPageTest@2362f559]" started-at="2026-04-03T19:10:46 GMT-04:00" name="closeBrowser" finished-at="2026-04-03T19:10:46 GMT-04:00" duration-ms="214" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-      </class> <!-- com.naveenautomation.PageTests.LoginPageTest -->
-      <class name="com.naveenautomation.PageTests.AccountPageTest">
-        <test-method is-config="true" signature="loggerSetup()[pri:0, instance:com.naveenautomation.PageTests.AccountPageTest@24269709]" started-at="2026-04-03T19:09:51 GMT-04:00" name="loggerSetup" finished-at="2026-04-03T19:09:51 GMT-04:00" duration-ms="39" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loggerSetup -->
-        <test-method is-config="true" signature="launch()[pri:0, instance:com.naveenautomation.PageTests.AccountPageTest@24269709]" started-at="2026-04-03T19:09:51 GMT-04:00" name="launch" finished-at="2026-04-03T19:09:55 GMT-04:00" duration-ms="4142" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launch -->
-        <test-method signature="validateUserIsAbleToViewReturns()[pri:1, instance:com.naveenautomation.PageTests.AccountPageTest@24269709]" started-at="2026-04-03T19:09:55 GMT-04:00" name="validateUserIsAbleToViewReturns" finished-at="2026-04-03T19:09:57 GMT-04:00" duration-ms="1617" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateUserIsAbleToViewReturns -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.naveenautomation.PageTests.AccountPageTest@24269709]" started-at="2026-04-03T19:09:57 GMT-04:00" name="closeBrowser" finished-at="2026-04-03T19:09:57 GMT-04:00" duration-ms="200" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="launch()[pri:0, instance:com.naveenautomation.PageTests.AccountPageTest@24269709]" started-at="2026-04-03T19:09:57 GMT-04:00" name="launch" finished-at="2026-04-03T19:10:00 GMT-04:00" duration-ms="3314" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launch -->
-        <test-method signature="validateUserIsAbleToUpdatePersonalInfo()[pri:2, instance:com.naveenautomation.PageTests.AccountPageTest@24269709]" started-at="2026-04-03T19:10:00 GMT-04:00" name="validateUserIsAbleToUpdatePersonalInfo" finished-at="2026-04-03T19:10:04 GMT-04:00" duration-ms="3360" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateUserIsAbleToUpdatePersonalInfo -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.naveenautomation.PageTests.AccountPageTest@24269709]" started-at="2026-04-03T19:10:04 GMT-04:00" name="closeBrowser" finished-at="2026-04-03T19:10:04 GMT-04:00" duration-ms="200" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="launch()[pri:0, instance:com.naveenautomation.PageTests.AccountPageTest@24269709]" started-at="2026-04-03T19:10:04 GMT-04:00" name="launch" finished-at="2026-04-03T19:10:07 GMT-04:00" duration-ms="3154" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launch -->
-        <test-method signature="validateUserIsAbleToSubscribe()[pri:3, instance:com.naveenautomation.PageTests.AccountPageTest@24269709]" started-at="2026-04-03T19:10:07 GMT-04:00" name="validateUserIsAbleToSubscribe" finished-at="2026-04-03T19:10:10 GMT-04:00" duration-ms="2676" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateUserIsAbleToSubscribe -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.naveenautomation.PageTests.AccountPageTest@24269709]" started-at="2026-04-03T19:10:10 GMT-04:00" name="closeBrowser" finished-at="2026-04-03T19:10:10 GMT-04:00" duration-ms="197" status="PASS">
+        </test-method> <!-- validateUserIsAbleToRemoveProductInWishList -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.naveenautomation.PageTests.AccountPageTest@1ce24091]" started-at="2026-04-07T02:28:44 GMT-04:00" name="closeBrowser" finished-at="2026-04-07T02:28:44 GMT-04:00" duration-ms="132" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
       </class> <!-- com.naveenautomation.PageTests.AccountPageTest -->
-      <class name="com.naveenautomation.PageTests.HomePageTest">
-        <test-method is-config="true" signature="loggerSetup()[pri:0, instance:com.naveenautomation.PageTests.HomePageTest@b2c9a9c]" started-at="2026-04-03T19:10:46 GMT-04:00" name="loggerSetup" finished-at="2026-04-03T19:10:46 GMT-04:00" duration-ms="3" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loggerSetup -->
-        <test-method is-config="true" signature="launch()[pri:0, instance:com.naveenautomation.PageTests.HomePageTest@b2c9a9c]" started-at="2026-04-03T19:10:46 GMT-04:00" name="launch" finished-at="2026-04-03T19:10:49 GMT-04:00" duration-ms="3447" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launch -->
-        <test-method signature="userIsAbleToPlaceOrder()[pri:0, instance:com.naveenautomation.PageTests.HomePageTest@b2c9a9c]" started-at="2026-04-03T19:10:49 GMT-04:00" name="userIsAbleToPlaceOrder" finished-at="2026-04-03T19:11:00 GMT-04:00" duration-ms="10961" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- userIsAbleToPlaceOrder -->
-        <test-method is-config="true" signature="launch()[pri:0, instance:com.naveenautomation.PageTests.HomePageTest@b2c9a9c]" started-at="2026-04-03T19:11:00 GMT-04:00" name="launch" finished-at="2026-04-03T19:11:04 GMT-04:00" duration-ms="3586" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launch -->
-        <test-method signature="userIsAbleToSearchforSpecificProduct()[pri:0, instance:com.naveenautomation.PageTests.HomePageTest@b2c9a9c]" started-at="2026-04-03T19:11:04 GMT-04:00" name="userIsAbleToSearchforSpecificProduct" finished-at="2026-04-03T19:11:05 GMT-04:00" duration-ms="1076" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- userIsAbleToSearchforSpecificProduct -->
-      </class> <!-- com.naveenautomation.PageTests.HomePageTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

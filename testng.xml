@@ -16,6 +16,8 @@
 			<class name="com.naveenautomation.PageTests.LoginPageTest" />
 			<class name="com.naveenautomation.PageTests.HomePageTest" />
 			<class name="com.naveenautomation.PageTests.SuccessPageTest" />
+			<class name="com.naveenautomation.PageTests.ComparePageTest" />
+			<class name="com.naveenautomation.PageTests.AddressPageTest" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

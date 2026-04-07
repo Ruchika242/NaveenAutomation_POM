@@ -27,6 +27,8 @@ public class LoginPage extends TestBase {
 
 	@FindBy(css = "div.alert")
 	WebElement alertMsg;
+	
+	
 
 	// This pvt method is not visible in LoginPageTest class of separate package
 	private void enterEmail(String emailID) {

@@ -8,21 +8,22 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.naveenautomation.PageTests.HomePageTest">
-        <methods>
-          <include name="loggerSetup"/>
-          <include name="userIsAbleToPlaceOrder"/>
-          <include name="launch"/>
-        </methods>
-      </class> <!-- com.naveenautomation.PageTests.HomePageTest -->
       <class name="com.naveenautomation.PageTests.LoginPageTest">
         <methods>
           <include name="closeBrowser"/>
           <include name="loggerSetup"/>
-          <include name="validateLoginWithMultipleCredentials" invocation-numbers="1"/>
+          <include name="validateUserIsAbleToLoginWithValidCred"/>
           <include name="launch"/>
         </methods>
       </class> <!-- com.naveenautomation.PageTests.LoginPageTest -->
+      <class name="com.naveenautomation.PageTests.AccountPageTest">
+        <methods>
+          <include name="launch"/>
+          <include name="loggerSetup"/>
+          <include name="closeBrowser"/>
+          <include name="validateUserIsAbleToRemoveProductInWishList"/>
+        </methods>
+      </class> <!-- com.naveenautomation.PageTests.AccountPageTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

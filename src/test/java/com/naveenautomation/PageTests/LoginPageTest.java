@@ -31,7 +31,7 @@ public class LoginPageTest extends TestBase {
 	private ProductDetailsPage productDetailsPage;
 	private CheckOutPage checkOutPage;
 	private HomePage homePage;
-	SoftAssert softassert = new SoftAssert();
+	
 
 	@BeforeMethod
 	public void launch() {
