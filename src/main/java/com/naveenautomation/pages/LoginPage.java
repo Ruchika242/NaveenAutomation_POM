@@ -14,8 +14,6 @@ public class LoginPage extends TestBase {
 											// LoginPage Class
 	}
 
-	
-
 	@FindBy(id = "input-email")
 	WebElement emailInput;
 
@@ -27,8 +25,12 @@ public class LoginPage extends TestBase {
 
 	@FindBy(css = "div.alert")
 	WebElement alertMsg;
-	
-	
+
+	@FindBy(xpath = "//div[@class='form-group']//a[text()='Forgotten Password']")
+	WebElement forgotPassword;
+
+	@FindBy(css = "div.container>div.alert")
+	WebElement msgOnForgottenPwd;
 
 	// This pvt method is not visible in LoginPageTest class of separate package
 	private void enterEmail(String emailID) {
@@ -48,15 +50,20 @@ public class LoginPage extends TestBase {
 		return new AccountPage();
 
 	}
-	
-	
+
+	public ForgottenPage clickOnForgotPwd(String email) {
+		enterEmail(email);
+		forgotPassword.click();
+		return new ForgottenPage();
+
+	}
 
 	public String getAlertMsgText() {
 		return alertMsg.getText();
 	}
 
-	
-	
-	
+	public String getMsgTextOnForgotPwd() {
+		return msgOnForgottenPwd.getText();
+	}
 
 }

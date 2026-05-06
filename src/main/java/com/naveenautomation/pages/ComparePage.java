@@ -20,10 +20,10 @@ public class ComparePage extends TestBase {
 	public String getTextOfSummaryOfComParedProduct(String headingName) {
 		List<WebElement> noOfRows= wd.findElements(By.xpath("//table[@class='table table-bordered']//tbody//tr"));
 		for (int i = 1; i < noOfRows.size(); i++) {
-			 List<WebElement> cols = noOfRows.get(i).findElements(By.tagName("td"));
+			 List<WebElement> noOfColumns = noOfRows.get(i).findElements(By.tagName("td"));
 
-		        if (cols.size() > 1 && cols.get(0).getText().equalsIgnoreCase(headingName)) {
-		            return cols.get(1).getText();
+		        if (noOfColumns.size() > 1 && noOfColumns.get(0).getText().equalsIgnoreCase(headingName)) {
+		            return noOfColumns.get(1).getText();
 		        }
 		    }
 

@@ -117,8 +117,8 @@ public class AccountPageTest extends TestBase {
 		categoryPage.clickOnProductWishlistButton();
 		wishListPage = categoryPage.clickOnWishListButton();
 		wishListPage.clickOnRemoveBtn();
-		//SString expectedMsg= "Success: You have modified your wish list!";
-		//softassert.assertEquals(wishListPage.getTextMsgOnRemovingProductFromWishlist(), expectedMsg, "Product not removed from wishlist");
+		String expectedMsg= "Success: You have modified your wish list!";
+		softassert.assertEquals(wishListPage.getTextMsgOnRemovingProductFromWishlist(), expectedMsg, "Product not removed from wishlist");
 		accountPage=wishListPage.clickOnContinueBtnOnWishListPage();
 		
 		

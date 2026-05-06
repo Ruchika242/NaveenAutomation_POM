@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Surefire suite]" verbose="0">
+  <test thread-count="5" name="Surefire test(failed)" verbose="0">
+    <classes>
+      <class name="com.naveenautomation.PageTests.LoginPageTest">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="initialization"/>
+          <include name="validateUserIsAbleToLoginWithValidCred"/>
+          <include name="launch"/>
+        </methods>
+      </class> <!-- com.naveenautomation.PageTests.LoginPageTest -->
+      <class name="com.naveenautomation.PageTests.AccountPageTest">
+        <methods>
+          <include name="launch"/>
+          <include name="initialization"/>
+          <include name="userIsAbleToCheckOrderHistory"/>
+          <include name="closeBrowser"/>
+          <include name="validateUserIsAbleToViewReturns"/>
+          <include name="validateUserIsAbleToSubscribe"/>
+          <include name="validateUserIsAbleToRemoveProductInWishList"/>
+        </methods>
+      </class> <!-- com.naveenautomation.PageTests.AccountPageTest -->
+      <class name="com.naveenautomation.PageTests.AddressPageTest">
+        <methods>
+          <include name="validateUserIsAbleToAddNewAddress"/>
+          <include name="closeBrowser"/>
+          <include name="initialization"/>
+          <include name="launch"/>
+        </methods>
+      </class> <!-- com.naveenautomation.PageTests.AddressPageTest -->
+    </classes>
+  </test> <!-- Surefire test(failed) -->
+</suite> <!-- Failed suite [Surefire suite] -->

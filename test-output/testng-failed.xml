@@ -6,9 +6,9 @@
       <class name="com.naveenautomation.PageTests.AccountPageTest">
         <methods>
           <include name="launch"/>
-          <include name="loggerSetup"/>
+          <include name="initialization"/>
+          <include name="userIsAbleToCheckOrderHistory"/>
           <include name="closeBrowser"/>
-          <include name="validateUserIsAbleToRemoveProductInWishList"/>
         </methods>
       </class> <!-- com.naveenautomation.PageTests.AccountPageTest -->
     </classes>

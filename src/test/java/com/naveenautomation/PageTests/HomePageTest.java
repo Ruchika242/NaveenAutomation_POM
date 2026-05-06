@@ -1,5 +1,6 @@
 package com.naveenautomation.PageTests;
 
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -22,7 +23,6 @@ public class HomePageTest extends TestBase {
 	private CheckOutPage checkOutPage;
 	private HomePage homePage;
 	private SuccessPage successPage;
-	
 
 	@BeforeMethod
 	public void launch() {
@@ -63,6 +63,11 @@ public class HomePageTest extends TestBase {
 		softassert.assertEquals(successPage.textOnOrderPlaced(), expectedTextOnOrderPlaced, "Order Not Placed");
 		softassert.assertAll();
 
+	}
+
+	@AfterMethod
+	public void closeBrowser() {
+		teardown();
 	}
 
 }

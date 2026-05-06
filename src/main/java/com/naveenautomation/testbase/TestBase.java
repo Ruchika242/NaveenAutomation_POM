@@ -1,5 +1,4 @@
 package com.naveenautomation.testbase;
-
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -9,33 +8,34 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
-import org.apache.log4j.BasicConfigurator;
-import org.apache.log4j.Level;
-import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
+import org.openqa.selenium.support.events.WebDriverEventListener;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeClass;
 import org.testng.asserts.SoftAssert;
 
 import com.naveenautomation.Utils.WebdriverEvents;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import net.bytebuddy.implementation.FieldAccessor.PropertyConfigurable;
 
 public class TestBase {
 
 	public static WebDriver wd;
+	public WebDriverWait wait;
 	private final String defaultBrowser = "CHROME";
 	private final String url = "https://naveenautomationlabs.com/opencart/index.php?route=account/login";
-	public static Logger logger;
+	public static  Logger logger = LogManager.getLogger(TestBase.class);
 	public WebdriverEvents events;
 	public EventFiringWebDriver e_driver;
+	
+	
 
 	protected SoftAssert softassert = new SoftAssert();
 
@@ -46,12 +46,7 @@ public class TestBase {
 	// files you need as backup,pattern of layout of file, what kind of pattern
 	// timing for logging.
 	// like year//month/day//hour//second.
-	public void loggerSetup() {
-		logger = Logger.getLogger(TestBase.class);// initialization
-		PropertyConfigurator.configure("C:\\Users\\Deepak\\EC\\NaveenAutomation1\\log4j.properties");// Configured
-		BasicConfigurator.configure();// Everything looks good, good to go
-		logger.setLevel(Level.INFO);// set the level for which you want log, it has diff levels.
-	}
+	
 
 	public void initialization() {
 		switch (defaultBrowser) {
@@ -62,11 +57,6 @@ public class TestBase {
 
 			Map<String, Object> prefs = new HashMap<>();
 			prefs.put("autofill.profile_enabled", false); // disable address popup
-			prefs.put("credentials_enable_service", false);
-			prefs.put("profile.password_manager_enabled", false);
-
-			options.setExperimentalOption("prefs", prefs);
-
 			wd = new ChromeDriver(options);
 
 			break;
@@ -80,16 +70,16 @@ public class TestBase {
 			throw new IllegalArgumentException();
 
 		}
-		// Warp the instance
+		
 		e_driver = new EventFiringWebDriver(wd);
+		
 
 		// Events which needs to be captured from WebdriverEvents Class
 		events = new WebdriverEvents();
-		e_driver.register(events);
+		e_driver.register((WebDriverEventListener) events);
 
 		// Assigning back the value to Web driver;
 		wd = e_driver;
-
 		wd.get(url);
 		wd.manage().window().maximize();
 		wd.manage().deleteAllCookies();
@@ -116,6 +106,12 @@ public class TestBase {
 			e.printStackTrace();
 		}
 	}
+
+	
+
+	
+
+	
 }
 
 //Where do we configure the Listener class?

@@ -1,134 +1,90 @@
 package com.naveenautomation.Utils;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.events.WebDriverEventListener;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
-import com.naveenautomation.testbase.TestBase;
+public class WebdriverEvents implements WebDriverEventListener {
 
-public class WebdriverEvents extends TestBase implements WebDriverEventListener {
+    public static Logger logger = LogManager.getLogger(WebdriverEvents.class);
 
-	@Override
-	public void beforeAlertAccept(WebDriver driver) {
-		logger.info("Before Accepted Alert");
-		
-	}
+    // ===== Navigation =====
+    @Override
+    public void beforeNavigateTo(String url, WebDriver driver) {
+        logger.info("Before navigating to: " + url);
+    }
 
-	@Override
-	public void afterAlertAccept(WebDriver driver) {
-		logger.info("After Accepted Alert");
-		
-	}
+    @Override
+    public void afterNavigateTo(String url, WebDriver driver) {
+        logger.info("After navigating to: " + url);
+    }
 
-	@Override
-	public void afterAlertDismiss(WebDriver driver) {
-		logger.info("Dismissed Alert");
-		
-	}
+    @Override
+    public void beforeNavigateBack(WebDriver driver) {}
+    @Override
+    public void afterNavigateBack(WebDriver driver) {}
 
-	@Override
-	public void beforeAlertDismiss(WebDriver driver) {
-		logger.info("Before Alert Dismiss");
-		
-	}
+    @Override
+    public void beforeNavigateForward(WebDriver driver) {}
+    @Override
+    public void afterNavigateForward(WebDriver driver) {}
 
-	@Override
-	public void beforeNavigateTo(String url, WebDriver driver) {
-		logger.info("Before Navigation");
-		
-	}
+    @Override
+    public void beforeNavigateRefresh(WebDriver driver) {}
+    @Override
+    public void afterNavigateRefresh(WebDriver driver) {}
 
-	@Override
-	public void afterNavigateTo(String url, WebDriver driver) {
-		logger.info("After Navigation");
-		
-	}
+    // ===== Find Element =====
+    @Override
+    public void beforeFindBy(By by, WebElement element, WebDriver driver) {
+        logger.info("Finding element: " + by);
+    }
 
-	@Override
-	public void beforeNavigateBack(WebDriver driver) {
-		// TODO Auto-generated method stub
-		
-	}
+    @Override
+    public void afterFindBy(By by, WebElement element, WebDriver driver) {
+        logger.info("Element found: " + by);
+    }
 
-	@Override
-	public void afterNavigateBack(WebDriver driver) {
-		// TODO Auto-generated method stub
-		
-	}
+    // ===== Click =====
+    @Override
+    public void beforeClickOn(WebElement element, WebDriver driver) {
+        logger.info("Before clicking on: " + element);
+    }
 
-	@Override
-	public void beforeNavigateForward(WebDriver driver) {
-		// TODO Auto-generated method stub
-		
-	}
+    @Override
+    public void afterClickOn(WebElement element, WebDriver driver) {
+        logger.info("After clicking on: " + element);
+    }
 
-	@Override
-	public void afterNavigateForward(WebDriver driver) {
-		// TODO Auto-generated method stub
-		
-	}
+    // ===== Alerts =====
+    @Override
+    public void beforeAlertAccept(WebDriver driver) {}
+    @Override
+    public void afterAlertAccept(WebDriver driver) {}
 
-	@Override
-	public void beforeNavigateRefresh(WebDriver driver) {
-		logger.info("Before Navigation");
-		
-	}
+    @Override
+    public void beforeAlertDismiss(WebDriver driver) {}
+    @Override
+    public void afterAlertDismiss(WebDriver driver) {}
 
-	@Override
-	public void afterNavigateRefresh(WebDriver driver) {
-		// TODO Auto-generated method stub
-		
-	}
+    // ===== Input / Value Change =====
+    @Override
+    public void beforeChangeValueOf(WebElement element, WebDriver driver, CharSequence[] keysToSend) {}
+    @Override
+    public void afterChangeValueOf(WebElement element, WebDriver driver, CharSequence[] keysToSend) {}
 
-	@Override
-	public void beforeFindBy(By by, WebElement element, WebDriver driver) {
-		logger.info("Finding Element using "+by);
-		
-	}
+    // ===== Script =====
+    @Override
+    public void beforeScript(String script, WebDriver driver) {}
+    @Override
+    public void afterScript(String script, WebDriver driver) {}
 
-	@Override
-	public void afterFindBy(By by, WebElement element, WebDriver driver) {
-		logger.info("Found Element using "+by);
-		
-	}
-
-	@Override
-	public void beforeClickOn(WebElement element, WebDriver driver) {
-		logger.info("Clicking on "+element);
-		
-	}
-
-	@Override
-	public void afterClickOn(WebElement element, WebDriver driver) {
-		logger.info("Clicked on "+element);
-		
-	}
-
-	@Override
-	public void beforeChangeValueOf(WebElement element, WebDriver driver, CharSequence[] keysToSend) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void afterChangeValueOf(WebElement element, WebDriver driver, CharSequence[] keysToSend) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void beforeScript(String script, WebDriver driver) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void afterScript(String script, WebDriver driver) {
-		// TODO Auto-generated method stub
-		
-	}
+    // ===== Exception Handling =====
+    @Override
+    public void onException(Throwable throwable, WebDriver driver) {
+        logger.error("Exception occurred: ", throwable);
+    }
 
 	@Override
 	public void beforeSwitchToWindow(String windowName, WebDriver driver) {
@@ -138,12 +94,6 @@ public class WebdriverEvents extends TestBase implements WebDriverEventListener 
 
 	@Override
 	public void afterSwitchToWindow(String windowName, WebDriver driver) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void onException(Throwable throwable, WebDriver driver) {
 		// TODO Auto-generated method stub
 		
 	}
@@ -162,14 +112,13 @@ public class WebdriverEvents extends TestBase implements WebDriverEventListener 
 
 	@Override
 	public void beforeGetText(WebElement element, WebDriver driver) {
-		logger.info("Getting text on "+element.getText());
+		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public void afterGetText(WebElement element, WebDriver driver, String text) {
-		logger.info("Got text on "+element.getText());
+		// TODO Auto-generated method stub
 		
 	}
-
 }

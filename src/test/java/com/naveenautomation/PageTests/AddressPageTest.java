@@ -20,64 +20,52 @@ import com.naveenautomation.pages.RightMenu;
 import com.naveenautomation.pages.WishListPage;
 import com.naveenautomation.testbase.TestBase;
 
-public class AddressPageTest extends TestBase{
-	
+public class AddressPageTest extends TestBase {
 
-		private LoginPage login;
-		private AccountPage accountPage;
-		private EditPage editPage;
-		private PasswordPage passwordPage;
-		private ReturnPage returnPage;
-		private NewsLetterPage newsLetterPage;
-		private CategoryPage categoryPage;
-		private WishListPage wishListPage;
-		private AddressPage addressPage;
-		private AddAddressPage addAddresspage;
-		
-		
+	private LoginPage login;
+	private AccountPage accountPage;
+	private EditPage editPage;
+	private PasswordPage passwordPage;
+	private ReturnPage returnPage;
+	private NewsLetterPage newsLetterPage;
+	private CategoryPage categoryPage;
+	private WishListPage wishListPage;
+	private AddressPage addressPage;
+	private AddAddressPage addAddresspage;
 
-		@BeforeMethod
-		public void launch() {
-			initialization();
-			login = new LoginPage();
-			
-			
-		}
-		
-		@Test
-		public void validateUserIsAbleToAddNewAddress() {
-			accountPage = login.clickOnlogin("chaudharyruchika3@gmail.com", "Sam@ira24");
-			addressPage=accountPage.clickOnAddressBook();
-			addAddresspage=addressPage.clickOnNewAddress();
-			addressPage=addAddresspage.addAddressDetails("Sam", "Singh", "104", "Burlington", "L7A 5L3", "Canada", "Alberta");
-			String expectedMsg= "Your address has been successfully added";
-			softassert.assertEquals(addressPage.getTextOnAddressAdded(), expectedMsg, "Address not added");
-			softassert.assertAll();
-			
-			
-			
-			
-		}
-		
-		
-	
-	
-	
+	@BeforeMethod
+	public void launch() {
+		initialization();
+		login = new LoginPage();
+
+	}
+
+	@Test
+	public void validateUserIsAbleToAddNewAddress() {
+		accountPage = login.clickOnlogin("chaudharyruchika3@gmail.com", "Sam@ira24");
+		addressPage = accountPage.clickOnAddressBook();
+		addAddresspage = addressPage.clickOnNewAddress();
+		addressPage = addAddresspage.addAddressDetails("Sam", "Singh", "104", "Burlington", "L7A 5L3", "Canada",
+				"Alberta");
+		String expectedMsg = "Your address has been successfully added";
+		softassert.assertEquals(addressPage.getTextOnAddressAdded(), expectedMsg, "Address not added");
+		softassert.assertAll();
+
+	}
+
 	@Test
 	public void validateUserIsAbleToRemoveAddress() {
 		accountPage = login.clickOnlogin("chaudharyruchika3@gmail.com", "Sam@ira24");
-		addressPage=accountPage.clickOnAddressBook();
+		addressPage = accountPage.clickOnAddressBook();
 		addressPage.clickOnDeleteBtn();
 		wd.switchTo().alert().accept();
 		String expectedMsgOnDeletingAddress = "Your address has been successfully deleted";
-		softassert.assertEquals(addressPage.getTextOnRemovingAddress(), expectedMsgOnDeletingAddress, "Address not deleted");
+		softassert.assertEquals(addressPage.getTextOnRemovingAddress(), expectedMsgOnDeletingAddress,
+				"Address not deleted");
 		softassert.assertAll();
-		
-		
-		
-		
+
 	}
-	
+
 	@AfterMethod
 	public void closeBrowser() {
 		teardown();
